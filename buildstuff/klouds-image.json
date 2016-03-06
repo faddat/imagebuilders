@@ -1,0 +1,19 @@
+{
+    "builders": [
+        {
+            "type": "googlecompute",
+            "account_file": "/home/faddat/Desktop/account.json",
+            "project_id": "resonant-truth-120806",
+            "source_image": "debian-8-jessie-v20160219",
+            "zone": "asia-east1-c",
+            "name": "klouds-jessie-gce",
+            "image_name": "leaf-{{timestamp}}"
+        }
+      ],
+    "provisioners": [
+      {
+      "type": "shell",
+      "script": "scripts/setup.sh"
+      }
+      ]
+}

@@ -1,0 +1,20 @@
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "/home/faddat/Desktop/account.json",
+      "project_id": "resonant-truth-120806",
+      "source_image": "debian-8-jessie-v20160301",
+      "zone": "asia-east1-c",
+      "disk_size": "25",
+      "name": "klouds-server-gce",
+      "image_name": "server-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "scripts/setup.sh"
+    }
+  ]
+}
